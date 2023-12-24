@@ -1,11 +1,4 @@
-// задача - составить функцию
-// способную принимать
-// информацию пользователя
-// и на её основе создавать карточку
-// 1 - выудить значения из ячеек ввода
-// 2 - записать значение куда нибудь
-// 3 - выписать значение на карточку откуда нибудь
-// 4 - создать карточку
+// K.A.R.P v0.1 unstable
 function addCard() {
   const crossName = document.querySelector("#crossName");
   const crossDescription = document.querySelector("#crossDescription");

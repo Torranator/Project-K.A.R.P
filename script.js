@@ -6,7 +6,6 @@
 // 2 - записать значение куда нибудь
 // 3 - выписать значение на карточку откуда нибудь
 // 4 - создать карточку
-
 function addCard() {
   const crossName = document.querySelector("#crossName");
   const crossDescription = document.querySelector("#crossDescription");
@@ -15,13 +14,11 @@ function addCard() {
   if (crossName.value && crossDescription.value) {
     let newElement = document.createElement("div");
 
-    newElement.innerHTML = `<div class="sneaker">
-        <img alt="${crossName.value + crossDescription.value}" src="${
-      crossImage.value
-    }" class="sneaker-image" />
-        <div id="sneaker-info" class="sneaker-info">
-            <h3 id="h3Stone">${crossName.value}</h3>
-            <p id="stoneSage">${crossDescription.value}</p>
+    newElement.innerHTML = `<div class="sneaker sneaker_animation">
+    <img src="${crossImage.value}" class="sneaker__image" id="sneaker-image" alt="${crossName.value + crossDescription.value}">
+      <div class="sneaker__info" id="sneaker-info">
+            <div class="sneaker__title">${crossName.value}</div>
+            <div class="sneaker__description">${crossDescription.value}</div>
         </div>
         </div>`;
     sneakers.appendChild(newElement);

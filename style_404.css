@@ -11,17 +11,17 @@ body{
     color: #121723;
 }
 
-.header{
-    background-color: white;
-    border-bottom: 1px solid #676B73;
-}
-
 .container {
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
     padding-left:150px;
     padding-right: 150px;
+}
+
+.header{
+    background-color: white;
+    border-bottom: 1px solid #676B73;
 }
 
 .right__side__header{
@@ -44,6 +44,7 @@ body{
     font-style: normal;
     font-weight: 700;
 }
+
 
 
 .header__container {
@@ -71,32 +72,6 @@ body{
     gap: 24px;
 }
 
-.Input_container{
-    display: flex;
-    padding-left: 5px;
-    margin-left: 0px;
-    gap: 20px;
-    border-radius: 10px;
-    background-color: #121723;
-    overflow: hidden;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-}
-
-.Input_windows{
-    display: flex;
-    gap: 5px;
-}
-
-.Input_window{
-    display: flex;
-}
-
-.Input_button{
-    display: flex;
-}
-
 a {
     color: inherit;
     text-decoration: none;
@@ -106,77 +81,65 @@ main {
     background-color:#E6E8EC66;
 }
 
-h1{
-    font-size: 48px;
-    font-weight: 700;
-}
-
-.main__container {
+.error__message {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 32px;
     padding-top: 32px;
     padding-bottom: 32px;
+    text-align: center;
 }
 
-.sneakers{
-    display: flex;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 24px;
-    align-self: stretch;/*Зачем?*/
-    flex-wrap: wrap;
-    list-style-type:none ;
+.button__container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.sneaker{
-    border-radius: 12px;
-    width: 364px;
+.return__button{
     overflow: hidden;
-    background-color: white;
+    background-color: #121723;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 9px;
 }
 
-.sneaker__image{
-    width: 100%;
+.return__button__text{
+    color: white;
+    font-family: 'Anonymous Pro' , monospace;
+    font-size: 30px;
 }
 
-.sneaker_animation{
+.return__button{
     transition:
     transform ease-in 100ms,
     box-shadow ease-in-out 200ms;
 }
 
-.sneaker_animation:hover{
+.return__button:hover{
     transition: transform  200ms ease, box-shadow 200ms;
     transform: translateY(-10px);
     box-shadow: 0px 4px 4px 0px #00000040;
   
 }
   
-  .sneaker_animation:active{
+.return__button:active{
     transition:  box-shadow 200ms ease, transform 200ms;
     box-shadow: 0px 4px 4px 0px hsla(0, 0%, 0%, 0.5);
     transform: translateY(2px);
 }
 
-.sneaker__info{
-    display: flex;
-    padding: 32px 24px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
+.error__code{
+    font-size: 70px;
+    font-family: 'Anonymous Pro', monospace;
 }
 
-.sneaker__title{
-    font-size: 26px;
-    font-weight: 700;
-
-}
-
-.sneaker__description{
-    font-size: 20px;
-    font-weight: 400;
+.oops{
+    font-size: 40px;
+    font-family: 'Anonymous Pro', monospace;
 }
 
 .footer{
@@ -240,7 +203,7 @@ hr{
     font-weight: 700;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1439px) {
 
     .container{
         max-width: 375px;
@@ -255,11 +218,6 @@ hr{
         gap:24px;
     }
 
-    .sneakers {
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-    }
     .main__container {
         display: flex;
         padding-top: 32px;
@@ -271,18 +229,17 @@ hr{
         gap: 32px;
     }
 
-    
-    h1{
-        font-size: 32px;
-        font-weight: 700;
+    .error__message {
+        display: flex;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        gap: 32px;
     }
 
-    .sneaker{
-        border-radius: 12px;
-        width: 343px;
-        overflow: hidden;
-        background-color: white;
-    }
 
     .footer__container{
         flex-direction: column;

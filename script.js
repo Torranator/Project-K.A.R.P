@@ -1,8 +1,8 @@
 // K.A.R.P v0.2 array build unstable
 const array_objects =[
   { name: "The New Balance C-ms574", description: "Salehe Bembury Shark Skin", image:"sneaker-big__img_NB_C_MS_574.png" },
-  { name: "The New Balance C-ms574", description: "Salehe Bembury Shark Skin", image:"sneaker-big__img_NB_C_MS_574.png" },
-  { name: "The New Balance C-ms574", description: "Salehe Bembury Shark Skin", image:"sneaker-big__img_NB_C_MS_574.png" },
+  { name: "Converse Chunk 70 High", description: "Comme des Garcons PLAY Black", image:"Converse Chuck 70 High.png" },
+  { name: "adidas Yeezy Foam RNNR", description: "Stone Sage", image:"adidas Yeezy Foam RNNR.png" },
 ];
 
 const sneaker_container = document.querySelector("#sneakers")
@@ -33,18 +33,39 @@ function addCards(array){
   }
 }
 
-function appendToArray(array){
-  const crossName = document.querySelector("#crossName");
-  const crossDescription = document.querySelector("#crossDescription");
-  const crossImage = document.querySelector("#crossImage");
+const addButton = document.querySelector('.addButton');
 
-  let array_objects_additive = [crossName.value,crossDescription.value,crossImage.value ]
+const inputFieldName = document.querySelector('.crossName');
+const inputFieldcrossDescription = document.querySelector('.crossDescription');
+const inputFieldNamecrossImage = document.querySelector('.crossImage');
 
-  array.push(array_objects_additive)
-
-  addCards(array_objects)
+function AddingValToArray() {
+  const inputValueName = inputFieldName.value;
+  const inputValuecrossDescription = inputFieldcrossDescription.value;
+  const inputValueNamecrossImage = inputFieldNamecrossImage.value;
+  
+  const newObject = {
+    name: inputValueName,
+    description:inputValuecrossDescription,
+    image:inputValueNamecrossImage,
+  };
+  array_objects.push(newObject);
+  inputFieldName.value = '';
+  inputFieldcrossDescription.value = '';
+  inputFieldNamecrossImage.value = '';
 }
+addButton.addEventListener('click',AddingValToArray)
+addCards(array_objects)
 
-const buttonAdd = document.getElementById("addButton");
-buttonAdd.addEventListener("click", appendToArray(array_objects));//append values into main array
-buttonAdd.addEventListener("click",alert("test broadcast message"))//why it displays only on startup and ignores pressing?
+addButton.addEventListener('click', function() {
+  innerHTML=""
+  addCards(array_objects)
+});
+
+const sneakersDiv = document.getElementById('sneakers');
+addButton.addEventListener('click', function() {
+  sneakersDiv.innerHTML = '';
+  addCards(array_objects)
+});
+
+//thanks falcon

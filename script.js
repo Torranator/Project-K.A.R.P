@@ -67,5 +67,3 @@ addButton.addEventListener('click', function() {
   sneakersDiv.innerHTML = '';
   addCards(array_objects)
 });
-
-//thanks falcon
